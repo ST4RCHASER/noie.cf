@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Internet Explorer</title>
+</head>
+
+<body>
+    <h1>No Internet Explorer | Download chrome without Internet Explorer</h1>
+    <b>THIS ONLY CAN USE IN WINDOWS!</b>
+    <br>
+    <br>
+    <h2>Install Google Chrome without Internet Explorer (Just copy and paste in PowerShell)</h2>
+    <h3>[Command]</h3>
+    iex ((New-Object System.Net.WebClient).DownloadString('<a href="https://noie.cf/c.ps1">https://noie.cf/c.ps1c</a>'))
+    <h3>[Backup]</h3>$LocalTempDir = $env:TEMP; $ChromeInstaller = "ChromeInstaller.exe"; (new-object
+    System.Net.WebClient).DownloadFile('http://dl.google.com/chrome/install/375.126/chrome_installer.exe',
+    "$LocalTempDir\$ChromeInstaller"); & "$LocalTempDir\$ChromeInstaller" /silent /install; $Process2Monitor =
+    "ChromeInstaller"; Do { $ProcessesFound = Get-Process | ?{$Process2Monitor -contains $_.Name} | Select-Object
+    -ExpandProperty Name; If ($ProcessesFound) { "Still running: $($ProcessesFound -join ', ')" | Write-Host;
+    Start-Sleep -Seconds 2 } else { rm "$LocalTempDir\$ChromeInstaller" -ErrorAction SilentlyContinue -Verbose } } Until
+    (!$ProcessesFound)
+    <br><h3>[Only download installer]</h3>Start-BitsTransfer -Source
+    "http://dl.google.com/chrome/install/375.126/chrome_installer.exe" -Destination
+    "C:\Users\Administrator\Desktop\chrome_installer.exe"
+    <h2>Or using as portal</h2>
+    <h3>[Driect]</h3>
+    <a
+        href="https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B57E47058-9559-70EC-74B5-0ADF68E8696E%7D%26lang%3Den%26browser%3D3%26usagestats%3D0%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3Dx64-stable-statsdef_1%26installdataindex%3Dempty/chrome/install/ChromeStandaloneSetup64.exe">Chrome
+        91 x64 Offline</a>,
+    <a
+        href="https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B57E47058-9559-70EC-74B5-0ADF68E8696E%7D%26lang%3Den%26browser%3D3%26usagestats%3D0%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3Dstable-arch_x86-statsdef_1%26installdataindex%3Dempty/chrome/install/ChromeStandaloneSetup.exe">Chrome
+        91 x32 Offline</a>
+    <h3>[Alternative]</h3>
+    <a href="https://www.google.com/intl/en/chrome/?standalone=1">Offline Installer</a>,
+    <a href="https://www.google.com/chrome/?system=true&standalone=1&platform=win">x32 All User</a>,
+    <a href="https://www.google.com/chrome/?system=true&standalone=1&platform=win64">x64 All User</a>
+    <h3>[Bonus]</h3>
+    <a href="https://www.mozilla.org/en-US/firefox/all/">Firefox</a>,
+    <a href="https://ftp.mozilla.org/pub/firefox/releases/">Firefox FTP</a>,
+    <a href="https://download3.operacdn.com/pub/opera/desktop/77.0.4054.90/win/Opera_77.0.4054.90_Setup.exe">Opera
+        x32</a>,
+    <a href="https://download3.operacdn.com/pub/opera/desktop/77.0.4054.90/win/Opera_77.0.4054.90_Setup_x64.exe">Opera
+        x64</a>,
+    <a href="https://download3.operacdn.com/pub/opera/desktop/77.0.4054.90/win/Opera_77.0.4054.90_Setup_x64.exe">Opera
+        x64</a>,
+    <a href="https://www.microsoft.com/en-us/edge/business/download">(DON'T) MS EDGE</a>,
+    <a href="https://packages.vmware.com/tools">VM Ware</a>,
+    <a href="https://download.virtualbox.org/virtualbox/">Virtualbox</a>,
+    <a href="https://www.7-zip.org/a/7z2102.exe">7z x32</a>,
+    <a href="https://www.7-zip.org/a/7z2100-arm64.exe">7z x64</a>,
+    <a href="http://mirror.ikoula.com/pub/citrix/xentools/iso/">Xen</a>,
+    <a href="https://github.com/xen-tools/xen-tools/releases">xen-tools</a>
+</body>
+
+</html>

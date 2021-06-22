@@ -15,7 +15,7 @@
     <br>
     <h2>Install Google Chrome without Internet Explorer (Just copy and paste in PowerShell)</h2>
     <h3>[Command]</h3>
-    iex ((New-Object System.Net.WebClient).DownloadString('<a href="https://noie.cf/c.ps1">http://noie.cf/c.ps1c</a>'))
+    iex ((New-Object System.Net.WebClient).DownloadString('<a href="http://noie.cf/c.ps1">http://noie.cf/c.ps1</a>'))
     <h3>[Backup]</h3>$LocalTempDir = $env:TEMP; $ChromeInstaller = "ChromeInstaller.exe"; (new-object
     System.Net.WebClient).DownloadFile('http://dl.google.com/chrome/install/375.126/chrome_installer.exe',
     "$LocalTempDir\$ChromeInstaller"); & "$LocalTempDir\$ChromeInstaller" /silent /install; $Process2Monitor =
